@@ -1,6 +1,7 @@
 set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
+set showtabline=2
 
 set tabstop=4
 set softtabstop=4
