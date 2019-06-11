@@ -37,5 +37,6 @@
     "gopls": {
         "usePlaceholders": true,
         "enhancedHover": true
-    }
+    },
+    "workbench.iconTheme": "file-icons"
 }
