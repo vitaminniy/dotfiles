@@ -31,4 +31,9 @@ kubectl () {
     fi
 }
 
+# bindings
+
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
+
 source $ZSH/oh-my-zsh.sh
