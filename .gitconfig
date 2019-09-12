@@ -1,0 +1,2 @@
+[alias]
+	s = status -s -b -uall
