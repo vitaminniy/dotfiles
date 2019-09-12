@@ -1,8 +1,10 @@
 export ZSH=$HOME/.oh-my-zsh
 export LANG=en_US.UTF-8
+export EDITOR='vim'
 
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
+
 
 path=(
     $path
@@ -14,10 +16,13 @@ path=(
 
 ZSH_THEME="robbyrussell"
 
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
 plugins=(
-    git
+    colorize
     docker
     docker-compose
+    git
 )
 
 # aliases
