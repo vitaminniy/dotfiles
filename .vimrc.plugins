@@ -3,4 +3,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
     Plugin 'vimwiki/vimwiki'
+
+    Plugin 'fatih/vim-go'
+    Plugin 'plasticboy/vim-markdown'
 call vundle#end()

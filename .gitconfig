@@ -1,2 +1,3 @@
 [alias]
-	s = status -s -b -uall
+	s = status --short -b -uall
+	graph = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'

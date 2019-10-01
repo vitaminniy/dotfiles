@@ -31,7 +31,6 @@ if has('cmdline_info')
     set ruler
     set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
     set showcmd
-
 endif
 
 set mouse=""
@@ -52,7 +51,7 @@ set splitright
 set splitbelow
 
 set et
-set wrap
+set nowrap
 set ai
 set cin
 set showmatch
@@ -62,7 +61,7 @@ set ignorecase
 set lz
 set listchars=tab:··
 set list
-set number
+set relativenumber
 syntax on
 
 set exrc
@@ -70,3 +69,29 @@ set secure
 
 set colorcolumn=90
 highlight ColorColumn ctermbg=darkgray
+
+"" STATUSLINE
+set laststatus=2
+
+set statusline= 
+set statusline+=%#PmenuSel#
+set statusline+=%{StatuslineGit()}
+set statusline+=\ %f
+set statusline+=%m\ 
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ %l:%c
+set statusline+=\ 
+
+
+"" FUNCTIONS
+function! GitBranch()
+    return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+    let l:branchname = GitBranch()
+    return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
