@@ -41,8 +41,4 @@ kubectl () {
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 
-if [ -f /usr/local/bin/vin ]; then
-    export EDITOR=/usr/local/bin/vim
-fi
-
 source $ZSH/oh-my-zsh.sh

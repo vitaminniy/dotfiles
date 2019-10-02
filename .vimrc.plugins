@@ -5,5 +5,5 @@ call vundle#begin()
     Plugin 'vimwiki/vimwiki'
 
     Plugin 'fatih/vim-go'
-    Plugin 'plasticboy/vim-markdown'
+    Plugin 'majutsushi/tagbar'
 call vundle#end()

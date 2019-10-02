@@ -8,6 +8,7 @@ endif
 
 let mapleader=","
 set nocompatible
+set backspace=indent,eol,start
 
 set background=dark
 
@@ -68,7 +69,9 @@ set exrc
 set secure
 
 set colorcolumn=90
+highlight clear LineNr
 highlight ColorColumn ctermbg=darkgray
+
 
 "" STATUSLINE
 set laststatus=2
@@ -82,6 +85,7 @@ set statusline+=%=
 set statusline+=%#CursorColumn#
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=\ 
 
