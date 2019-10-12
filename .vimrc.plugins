@@ -6,4 +6,5 @@ call vundle#begin()
 
     Plugin 'fatih/vim-go'
     Plugin 'majutsushi/tagbar'
+    Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
