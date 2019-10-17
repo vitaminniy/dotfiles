@@ -1,1 +1,8 @@
-# dotfiles collection
+# dotfiles
+
+## run
+
+```sh
+./install.sh
+```
+
