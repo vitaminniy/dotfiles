@@ -3,8 +3,7 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
-
+export GOROOT=/usr/local/go
 
 path=(
     $path
