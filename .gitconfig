@@ -1,3 +1,7 @@
 [alias]
 	s = status --short -b -uall
 	graph = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+[merge]
+	conflictStyle = diff3
+[rerere]
+	enabled = true
