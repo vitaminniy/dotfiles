@@ -13,27 +13,20 @@ path=(
     $HOME/bin
 )
 
-ZSH_THEME="robbyrussell"
-
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 plugins=(
     colorize
     docker
     docker-compose
     git
+    tmux
 )
 
-# aliases
+ZSH_THEME="robbyrussell"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-kubectl () {
-    command kubectl $*
-    if [[ -z $KUBECTL_COMPLETE ]]
-    then
-        source <(command kubectl completion zsh)
-        KUBECTL_COMPLETE=1 
-    fi
-}
+# tmux plugin
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOSTART_ONCE="true"
 
 # bindings
 
