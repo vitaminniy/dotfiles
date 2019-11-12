@@ -8,5 +8,5 @@ ln -sf $(pwd)/vimrc.plugins $HOME/.vimrc.plugins
 
 cat >> $HOME/.gitconfig <<EOF
 [include]
-    path = $(pwd)/gitconfig
+	path = $(pwd)/gitconfig
 EOF
