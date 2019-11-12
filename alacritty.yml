@@ -1,7 +1,0 @@
-font:
-  size: 14.0
-
-shell:
-  program: /usr/local/bin/zsh
-  args:
-    - --login
