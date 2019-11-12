@@ -1,0 +1,14 @@
+window:
+    startup_mode: Windowed
+
+    font:
+        size: 14.0
+        normal:
+            family: "Fira Code"
+            style: Retina
+        bold:
+            family: "Fira Code"
+            style: Bold
+        italic:
+            family: "Source Code Pro"
+            style: "Medium Italic"
