@@ -9,5 +9,5 @@ ln -sf $(pwd)/alacritty.yml $HOME/.alacritty.yml
 
 cat >> $HOME/.gitconfig <<EOF
 [include]
-    path = $(pwd)/.gitconfig
+    path = $(pwd)/gitconfig
 EOF
