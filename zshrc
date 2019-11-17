@@ -24,12 +24,7 @@ plugins=(
 ZSH_THEME="robbyrussell"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# tmux plugin
-ZSH_TMUX_AUTOSTART="true"
-ZSH_TMUX_AUTOSTART_ONCE="true"
-
 # bindings
-
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 
