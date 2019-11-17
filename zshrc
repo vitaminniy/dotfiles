@@ -33,4 +33,8 @@ ZSH_TMUX_AUTOSTART_ONCE="true"
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=$HOME/.cache/zsh/history
+
 source $ZSH/oh-my-zsh.sh

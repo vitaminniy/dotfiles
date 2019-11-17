@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mkdir -p $HOME/.cache/zsh
+
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
 ln -sf $(pwd)/zshrc $HOME/.zshrc
