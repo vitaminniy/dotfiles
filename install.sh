@@ -1,11 +1,8 @@
 #!/bin/sh
 
 # zsh
-mkdir -p $HOME/.config/zsh
 mkdir -p $HOME/.cache/zsh
-
-ln -sf $(pwd)/zprofile $HOME/.zprofile
-ln -sf $(pwd)/zshrc $HOME/.config/zsh/.zshrc
+ln -sf $(pwd)/zshrc $HOME/.zshrc
 
 # vim
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
