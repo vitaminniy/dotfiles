@@ -10,6 +10,9 @@ git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.v
 ln -sf $(pwd)/vimrc $HOME/.vimrc
 ln -sf $(pwd)/vimrc.plugins $HOME/.vimrc.plugins
 
+# tmux
+ln -sf $(pwd)/tmux.conf $HOME/.tmux.conf
+
 # git
 cat >> $HOME/.gitconfig <<EOF
 [include]
