@@ -39,6 +39,8 @@ set noswapfile
 set autochdir
 set hidden
 set history=1000
+set ttyfast
+set ttyscroll=10
 
 "" FORMATTING
 
