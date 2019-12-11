@@ -18,3 +18,6 @@ cat >> $HOME/.gitconfig <<EOF
 [include]
 	path = $(pwd)/gitconfig
 EOF
+
+# rust/cargo
+mkdir -p $HOME/.cargo/bin

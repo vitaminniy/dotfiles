@@ -11,6 +11,7 @@ path=(
     $GOPATH/bin
     $GOROOT/bin
     $HOME/bin
+    $HOME/.cargo/bin
 )
 
 plugins=(
