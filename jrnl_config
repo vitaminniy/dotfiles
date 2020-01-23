@@ -1,0 +1,13 @@
+{
+  "editor": "vim",
+  "encrypt": false,
+  "highlight": true,
+  "journals": {
+    "default": "$HOME/.jrnl/default.txt"
+  },
+  "linewrap": 79,
+  "default_hour": 9,
+  "default_minute": 0,
+  "tagsymbols": "@",
+  "timeformat": "%Y-%m-%d %H:%M"
+}
