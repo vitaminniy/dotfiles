@@ -117,6 +117,12 @@ let g:go_def_mapping_enabled = 1
 let g:go_term_enabled = 1
 let g:go_term_close_on_exit = 0
 
+"" tagbar
+let g:tagbar_left = 1
+let g:tagbar_autoclose = 1
+let g:tagbar_compact = 1
+let g:tagbar_silent = 1
+
 "" FUNCTIONS
 function! GitBranch()
     return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
