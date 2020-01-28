@@ -5,7 +5,5 @@ call vundle#begin()
     Plugin 'vimwiki/vimwiki'
 
     Plugin 'fatih/vim-go'
-    Plugin 'majutsushi/tagbar'
-    Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'rust-lang/rust.vim'
 call vundle#end()
