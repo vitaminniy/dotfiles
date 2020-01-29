@@ -34,4 +34,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=$HOME/.cache/zsh/history
 
+function delete_gone_branches() {
+    git branch -vv | awk '{if ($4 == "gone]") print $1}' | xargs git branch -d
+}
+
 source $ZSH/oh-my-zsh.sh
