@@ -39,3 +39,7 @@ function delete_gone_branches() {
 }
 
 source $ZSH/oh-my-zsh.sh
+
+echo "\\e[1mOS: \\e[0;32m\"$(uname -rs)\"\\e[0m"
+echo "$(uptime | sed 's/^ //' | sed 's/^up //' | awk '{print "\\e[1mUptime: \\e[0;32m"$0"\\e[0m"}')"
+echo "\\e[1mHostname: \\e[0;32m$(uname -n)\\e[0m"
