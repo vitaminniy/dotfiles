@@ -102,6 +102,7 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 set splitright                  " Puts new vsplit windows to the right of the current
 set splitbelow                  " Puts new split windows to the bottom of the current
 
+
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-h> <C-W>h
@@ -127,3 +128,12 @@ function! StatuslineGit()
     return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
+function! GoEscape()
+    set makeprg=GO111MODULES=on\ go\ build\ -mod=vendor\ -gcflags='-m'\ %:p:h\ 2>&1
+    make
+    set makeprg=make
+    copen
+endfunction
+
+"" COMMANDS
+command! GoEscape call GoEscape()
