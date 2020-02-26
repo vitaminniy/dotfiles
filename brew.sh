@@ -4,6 +4,5 @@ brew install \
          htop \
          tmux \
          jq \
-         jrnl \
          fzf
 

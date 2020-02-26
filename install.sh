@@ -22,6 +22,3 @@ EOF
 # rust/cargo
 mkdir -p $HOME/.cargo/bin
 
-# jrnl
-mkdir -p $HOME/.jrnl
-ln -sf $PWD/jrnl_config $HOME/.jrnl_config
