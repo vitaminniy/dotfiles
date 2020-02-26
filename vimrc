@@ -52,7 +52,6 @@ set laststatus=2                " always display statusline
 
 set statusline= 
 set statusline+=%#PmenuSel#
-set statusline+=%{StatuslineGit()}
 set statusline+=\ %f
 set statusline+=%m\ 
 set statusline+=%=
@@ -119,15 +118,6 @@ let g:go_term_enabled = 1
 let g:go_term_close_on_exit = 0
 
 "" FUNCTIONS
-function! GitBranch()
-    return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function! StatuslineGit()
-    let l:branchname = GitBranch()
-    return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
-
 function! GoEscape()
     set makeprg=GO111MODULES=on\ go\ build\ -mod=vendor\ -gcflags='-m'\ %:p:h\ 2>&1
     make
