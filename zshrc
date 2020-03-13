@@ -5,6 +5,9 @@ export EDITOR='vim'
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 
+# disable Micorsoft telemetry
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 path=(
     $path
     /usr/local/bin
