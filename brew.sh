@@ -4,5 +4,6 @@ brew install \
          htop \
          tmux \
          jq \
-         fzf
+         fzf \
+         ncdu
 
