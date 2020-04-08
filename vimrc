@@ -6,20 +6,25 @@ endif
 
 "" GENERAL
 
-syntax on                   " syntax highlighting
-filetype plugin indent on   " autodetect file type
+let mapleader=","
+set nocompatible
 
+filetype plugin indent on   " autodetect file type
+syntax on                   " syntax highlighting
+scriptencoding utf-8
+set encoding=utf-8
+set termencoding=utf-8
 set t_ut=
 set ttyscroll=10
 set ttyfast
-let mapleader=","
-set nocompatible
+
+if has('termguicolors')
+    set termguicolors
+endif
+
 set background=dark
 
-scriptencoding utf-8
-set encoding=utf-8
 set showtabline=2
-set termencoding=utf-8
 
 if has('clipboard')
     if has('unnamedplus')
@@ -30,38 +35,11 @@ if has('clipboard')
 endif
 
 
-if has('cmdline_info')
-    set ruler
-    set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
-    set showcmd
-endif
+set ruler
+set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
+set showcmd
 
 set mouse=""
-set noexpandtab
-set smarttab
-set et
-set nowrap
-set ai
-set cin
-set lz
-set exrc
-set secure
-
-
-set laststatus=2                " always display statusline
-
-set statusline= 
-set statusline+=%#PmenuSel#
-set statusline+=\ %f
-set statusline+=%m\ 
-set statusline+=%=
-set statusline+=%#CursorColumn#
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
-set statusline+=\ 
-
 set noswapfile                  " disable swap files
 set autochdir                   " auto change current directory to file directory
 set hidden                      " Allow buffer switching without saving
@@ -69,8 +47,26 @@ set history=1000
 set number
 set relativenumber
 set virtualedit=block
+
+" Shortcuts
+" Change Working Directory to that of the current file
+cmap cwd lcd %:p:h
+cmap cd. lcd %:p:h
+
+noremap <leader>hl :nohl<CR>
+
+"""""""""""""""""""""""""""""""""" APPERENCE """""""""""""""""""""""""""""""""""
+set tabpagemax=15               " Only show 15 tabs
 set showmode                    " Display the current mode
+
 set cursorline                  " Highlight current line
+
+highlight clear SignColumn      " SignColumn should match background
+highlight clear LineNr          " Current line number row will have same
+                                " background color in relative mode
+set laststatus=2                " always display statusline
+set statusline=%<%n\ %F\ %m\ %r\ %y\ 0x%B,%b%=%l:%c\ %P
+
 set backspace=indent,eol,start  " Backspace for dummies
 set linespace=0                 " No extra spaces between rows
 set showmatch                   " Show matching brackets/parenthesis
@@ -93,6 +89,8 @@ set vb t_vb=                    " No more beeps
 set lazyredraw
 set nofoldenable
 
+"""""""""""""""""""""""""""""""""" FORMATTING """"""""""""""""""""""""""""""""""
+
 set autoindent                  " Indent at the same level of the previous line
 set shiftwidth=4                " Use indents of 4 spaces
 set tabstop=4                   " An indentation every four columns
@@ -101,6 +99,7 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 set splitright                  " Puts new vsplit windows to the right of the current
 set splitbelow                  " Puts new split windows to the bottom of the current
 
+""""""""""""""""""""""""""""""""" KEY MAPPING """"""""""""""""""""""""""""""""""
 
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
@@ -110,14 +109,19 @@ nmap <C-l> <C-W>l
 nmap j gj
 nmap k gk
 
-"" vim-go
+"""""""""""""""""""""""""""""""""" Fugitive """"""""""""""""""""""""""""""""""""
+
+nnoremap <leader>gd :Gvdiff<CR>
+nnoremap <leader>gs :Gstatus<CR>
+
+""""""""""""""""""""""""""""""""""" vim-go """""""""""""""""""""""""""""""""""""
+
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
 let g:go_def_mapping_enabled = 1
 let g:go_term_enabled = 1
 let g:go_term_close_on_exit = 0
 
-"" FUNCTIONS
 function! GoEscape()
     set makeprg=GO111MODULES=on\ go\ build\ -mod=vendor\ -gcflags='-m'\ %:p:h\ 2>&1
     make
@@ -125,5 +129,10 @@ function! GoEscape()
     copen
 endfunction
 
-"" COMMANDS
 command! GoEscape call GoEscape()
+
+"""""""""""""""""""""""""""""""""""" Rust """"""""""""""""""""""""""""""""""""""
+
+let g:rust_clip_command = 'pbcopy'
+let g:rustfmt_autosave = 1
+
