@@ -116,9 +116,22 @@ nnoremap <leader>gs :Gstatus<CR>
 
 """"""""""""""""""""""""""""""""""" vim-go """""""""""""""""""""""""""""""""""""
 
+let g:go_highlight_extra_types = 1
+let g:go_highlight_functions = 0
+let g:go_highlight_function_parameters = 0
+let g:go_highlight_function_calls = 0
+let g:go_highlight_types = 0
+let g:go_highlight_fields = 0
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_format_strings = 1
+
 let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
+
 let g:go_auto_type_info = 1
 let g:go_def_mapping_enabled = 1
+
 let g:go_term_enabled = 1
 let g:go_term_close_on_exit = 0
 
