@@ -88,6 +88,7 @@ set fillchars+=vert:\
 set vb t_vb=                    " No more beeps
 set lazyredraw
 set nofoldenable
+set linebreak
 
 """""""""""""""""""""""""""""""""" FORMATTING """"""""""""""""""""""""""""""""""
 
