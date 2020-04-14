@@ -150,3 +150,9 @@ command! GoEscape call GoEscape()
 let g:rust_clip_command = 'pbcopy'
 let g:rustfmt_autosave = 1
 
+""""""""""""""""""""""""""""""""""" vimwiki """"""""""""""""""""""""""""""""""""
+
+let g:vimwiki_list = [{'path': '$HOME/Yandex.Disk.localized/vimwiki'}]
+let g:vimwiki_ext = '.md'
+let g:vimwiki_syntax = 'markdown'
+let g:vimwiki_global_ext = 0
