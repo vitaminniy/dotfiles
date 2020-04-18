@@ -114,6 +114,7 @@ nmap k gk
 
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gw :Gw<CR>
 
 """"""""""""""""""""""""""""""""""" vim-go """""""""""""""""""""""""""""""""""""
 
