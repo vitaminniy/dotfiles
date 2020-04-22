@@ -6,5 +6,6 @@ brew	install \
 		jq \
 		fzf \
 		ncdu \
-		cmake
+		cmake \
+		llvm
 
