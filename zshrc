@@ -15,7 +15,6 @@ path=(
     $GOROOT/bin
     $HOME/bin
     $HOME/.cargo/bin
-    $HOME/.poetry/bin
 )
 
 plugins=(
