@@ -8,8 +8,6 @@ export GOROOT=/usr/local/go
 # disable Micorsoft telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-export CXX=clang++
-
 path=(
     $path
     /usr/local/bin
@@ -59,18 +57,4 @@ if [ -f $HOME/yandex-cloud/path.bash.inc ]; then source $HOME/yandex-cloud/path.
 
 # The next line enables shell command completion for yc.
 if [ -f $HOME/yandex-cloud/completion.zsh.inc ]; then source $HOME/yandex-cloud/completion.zsh.inc; fi
-
-# Override default OSX llvm located at /Library/Developer/CommandLineTools
-# Ref: https://embeddedartistry.com/blog/2017/02/24/installing-llvm-clang-on-osx
-if [ -d "/usr/local/opt/llvm" ]; then
-	LLVM_DIR="/usr/local/opt/llvm"
-
-	export LDFLAGS="-L$LLVM_DIR/lib -Wl,-rpath,$LLVM_DIR/lib"
-	export CPPFLAGS="-I$LLVM_DIR/include -I$LLVM_DIR/include/c++/v1"
-
-	path=(
-		$LLVM_DIR/bin
-		$path
-	)
-fi
 
