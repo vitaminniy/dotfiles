@@ -10,4 +10,6 @@ call vundle#begin()
 
     Plugin 'sheerun/vim-polyglot'
     Plugin 'sudar/vim-arduino-syntax'
+
+    Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()
