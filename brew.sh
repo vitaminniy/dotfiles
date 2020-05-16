@@ -1,11 +1,12 @@
 #!/bin/sh
 
 brew	install \
-		htop \
-		tmux \
-		jq \
-		fzf \
-		ncdu \
-		cmake \
-		llvm
+		htop	\
+		tmux	\
+		jq		\
+		fzf		\
+		ncdu	\
+		cmake	\
+		llvm	\
+		node
 
