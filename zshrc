@@ -28,10 +28,6 @@ plugins=(
 ZSH_THEME="robbyrussell"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# bindings
-bindkey "^[^[[C" forward-word
-bindkey "^[^[[D" backward-word
-
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=$HOME/.cache/zsh/history
@@ -58,3 +54,6 @@ if [ -f $HOME/yandex-cloud/path.bash.inc ]; then source $HOME/yandex-cloud/path.
 # The next line enables shell command completion for yc.
 if [ -f $HOME/yandex-cloud/completion.zsh.inc ]; then source $HOME/yandex-cloud/completion.zsh.inc; fi
 
+# bindings
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
