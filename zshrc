@@ -54,6 +54,26 @@ if [ -f $HOME/yandex-cloud/path.bash.inc ]; then source $HOME/yandex-cloud/path.
 # The next line enables shell command completion for yc.
 if [ -f $HOME/yandex-cloud/completion.zsh.inc ]; then source $HOME/yandex-cloud/completion.zsh.inc; fi
 
+export CC='clang'
+export CXX=$CC++
+
+# Enable mainline llvm on darwin if installed
+if [ -d /usr/local/opt/llvm ]; then
+	path=(
+		$path
+		/usr/local/opt/llvm/bin
+	)
+
+	export CC='/usr/local/opt/llvm/bin/clang'
+	export CXX=$CC++
+
+	LDFLAGS+='-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib'
+	export LDFLAGS=$LDFLAGS
+
+	CPPFLAGS+='-I/usr/local/opt/llvm/include -I/usr/local/opt/llvm/include/c++/v1/'
+	export CPPFLAGS=$CPPFLAGS
+fi
+
 # bindings
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
