@@ -11,5 +11,5 @@ call vundle#begin()
     Plugin 'sheerun/vim-polyglot'
     Plugin 'sudar/vim-arduino-syntax'
 
-    Plugin 'ycm-core/YouCompleteMe'
+	Plugin 'neoclide/coc.nvim'
 call vundle#end()

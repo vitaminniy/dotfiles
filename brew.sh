@@ -8,5 +8,6 @@ brew	install \
 		ncdu	\
 		cmake	\
 		llvm	\
-		node
+		node	\
+		yarn
 

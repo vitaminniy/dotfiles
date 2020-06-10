@@ -90,6 +90,10 @@ set lazyredraw
 set nofoldenable
 set linebreak
 
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
 """""""""""""""""""""""""""""""""" FORMATTING """"""""""""""""""""""""""""""""""
 
 set autoindent                  " Indent at the same level of the previous line
@@ -162,3 +166,37 @@ let g:vimwiki_list = [
 let g:vimwiki_ext = '.md'
 let g:vimwiki_syntax = 'markdown'
 let g:vimwiki_global_ext = 0
+
+"""""""""""""""""""""""""""""""""" coc-nvim """"""""""""""""""""""""""""""""""""
+
+let g:coc_global_extensions = [
+\ 'coc-json',
+\ 'coc-yaml',
+\ 'coc-python',
+\ 'coc-lua',
+\ 'coc-cmake',
+\ 'coc-markdownlint'
+\ ]
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
