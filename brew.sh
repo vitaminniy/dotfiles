@@ -9,5 +9,6 @@ brew	install \
 		cmake	\
 		llvm	\
 		node	\
-		yarn
+		yarn	\
+		conan
 
