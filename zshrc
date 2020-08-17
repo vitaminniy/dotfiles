@@ -60,19 +60,19 @@ export CXX=$CC++
 
 # Enable mainline llvm on darwin if installed
 if [ -d /usr/local/opt/llvm ]; then
-	path=(
-		$path
-		/usr/local/opt/llvm/bin
-	)
+    path=(
+        $path
+        /usr/local/opt/llvm/bin
+    )
 
-	export CC='/usr/local/opt/llvm/bin/clang'
-	export CXX=$CC++
+    export CC='/usr/local/opt/llvm/bin/clang'
+    export CXX=$CC++
 
-	LDFLAGS+='-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib'
-	export LDFLAGS=$LDFLAGS
+    LDFLAGS+='-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib'
+    export LDFLAGS=$LDFLAGS
 
-	CPPFLAGS+='-I/usr/local/opt/llvm/include -I/usr/local/opt/llvm/include/c++/v1/'
-	export CPPFLAGS=$CPPFLAGS
+    CPPFLAGS+='-I/usr/local/opt/llvm/include -I/usr/local/opt/llvm/include/c++/v1/'
+    export CPPFLAGS=$CPPFLAGS
 fi
 
 # Export rust sources directory
