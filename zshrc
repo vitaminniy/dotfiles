@@ -23,6 +23,7 @@ plugins=(
     docker-compose
     git
     tmux
+    rust
 )
 
 ZSH_THEME="robbyrussell"
@@ -72,6 +73,15 @@ if [ -d /usr/local/opt/llvm ]; then
 
 	CPPFLAGS+='-I/usr/local/opt/llvm/include -I/usr/local/opt/llvm/include/c++/v1/'
 	export CPPFLAGS=$CPPFLAGS
+fi
+
+# Export rust sources directory
+# If not exists than call `rustup add component rust-src`
+if rustc_loc='$(type -p rustc)' || [[ -z $rustc_loc ]]; then
+    RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
+    if [[ -d $RUST_SRC_PATH ]]; then
+        export RUST_SRC_PATH=$RUST_SRC_PATH
+    fi
 fi
 
 # bindings
