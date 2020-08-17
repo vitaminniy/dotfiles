@@ -155,6 +155,22 @@ command! GoEscape call GoEscape()
 let g:rust_clip_command = 'pbcopy'
 let g:rustfmt_autosave = 1
 
+" setup rusty-tags
+" See https://github.com/dan-t/rusty-tags for reference.
+" Also you need `cargo install rusty-tags` for this to work.
+" setup ctags for *.rs
+if !empty($RUST_SRC_PATH)
+	autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
+else
+	autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+endif
+
+" rewrite project ctags file
+if executable('rusty-tags')
+	autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+endif
+" end setup rusty-tags
+
 """"""""""""""""""""""""""""""""""" vimwiki """"""""""""""""""""""""""""""""""""
 
 let g:vimwiki_list = [
