@@ -10,5 +10,6 @@ brew	install \
 		llvm	\
 		node	\
 		yarn	\
-		conan
+		conan	\
+		coreutils
 
