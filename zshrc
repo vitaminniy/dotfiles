@@ -79,7 +79,6 @@ fi
 YQL_SHELL_COMPLETION=$HOME/.yql/shell_completion
 if [ -f $YQL_SHELL_COMPLETION ]; then source $YQL_SHELL_COMPLETION; fi
 
-source /Users/udalovmax/.yql/shell_completion
 # Export rust sources directory
 # If not exists than call `rustup add component rust-src`
 if rustc_loc='$(type -p rustc)' || [[ -z $rustc_loc ]]; then
