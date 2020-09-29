@@ -75,6 +75,11 @@ if [ -d /usr/local/opt/llvm ]; then
     export CPPFLAGS=$CPPFLAGS
 fi
 
+# Enabled YQL shell completions
+YQL_SHELL_COMPLETION=$HOME/.yql/shell_completion
+if [ -f $YQL_SHELL_COMPLETION ]; then source $YQL_SHELL_COMPLETION; fi
+
+source /Users/udalovmax/.yql/shell_completion
 # Export rust sources directory
 # If not exists than call `rustup add component rust-src`
 if rustc_loc='$(type -p rustc)' || [[ -z $rustc_loc ]]; then
@@ -87,3 +92,4 @@ fi
 # bindings
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
+
