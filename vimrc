@@ -216,3 +216,6 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
+" Set tags filepath
+set tags=./tags,tags;tags;/
