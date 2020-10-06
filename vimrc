@@ -186,12 +186,14 @@ let g:vimwiki_global_ext = 0
 """""""""""""""""""""""""""""""""" coc-nvim """"""""""""""""""""""""""""""""""""
 
 let g:coc_global_extensions = [
-\ 'coc-json',
-\ 'coc-yaml',
-\ 'coc-python',
-\ 'coc-lua',
 \ 'coc-cmake',
-\ 'coc-markdownlint'
+\ 'coc-go',
+\ 'coc-json',
+\ 'coc-lua',
+\ 'coc-markdownlint',
+\ 'coc-python',
+\ 'coc-tsserver',
+\ 'coc-yaml'
 \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
