@@ -22,3 +22,5 @@ EOF
 # rust/cargo
 mkdir -p $HOME/.cargo/bin
 
+# nb
+ln -sf $(pwd)/nbrc $HOME/.nbrc
