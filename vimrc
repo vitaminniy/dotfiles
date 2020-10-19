@@ -221,3 +221,6 @@ set shortmess+=c
 
 " Set tags filepath
 set tags=./tags,tags;tags;/
+
+" Set C++ editing options
+autocmd FileType cpp setlocal shiftwidth=0 tabstop=2 expandtab
