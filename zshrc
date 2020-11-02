@@ -8,6 +8,8 @@ export GOROOT=/usr/local/go
 # disable Micorsoft telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
+export PYENV_ROOT=$HOME/.pyenv
+
 path=(
     $path
     /usr/local/bin
@@ -15,6 +17,7 @@ path=(
     $GOROOT/bin
     $HOME/bin
     $HOME/.cargo/bin
+    $PYENV_ROOT/bin
 )
 
 plugins=(
@@ -86,6 +89,11 @@ if rustc_loc='$(type -p rustc)' || [[ -z $rustc_loc ]]; then
     if [[ -d $RUST_SRC_PATH ]]; then
         export RUST_SRC_PATH=$RUST_SRC_PATH
     fi
+fi
+
+# Enable pyenv shims and autocompletion
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi
 
 # bindings

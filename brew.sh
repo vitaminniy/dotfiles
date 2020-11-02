@@ -13,5 +13,6 @@ brew	install		\
 		conan		\
 		coreutils	\
 		grpc		\
-		protobuf
+		protobuf	\
+		pyenv
 
