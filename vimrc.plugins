@@ -12,4 +12,6 @@ call vundle#begin()
     Plugin 'majutsushi/tagbar'
 
     Plugin 'wakatime/vim-wakatime'
+
+    Plugin 'vim-scripts/ebnf.vim'
 call vundle#end()
