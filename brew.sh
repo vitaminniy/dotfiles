@@ -14,5 +14,6 @@ brew	install		\
 		coreutils	\
 		grpc		\
 		protobuf	\
-		pyenv
+		pyenv		\
+		pinentry-mac
 
