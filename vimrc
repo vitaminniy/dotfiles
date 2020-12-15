@@ -15,8 +15,11 @@ scriptencoding utf-8
 set encoding=utf-8
 set termencoding=utf-8
 set t_ut=
-set ttyscroll=10
 set ttyfast
+
+if !has('nvim')
+    set ttyscroll=10
+endif
 
 if has('termguicolors')
     set termguicolors
