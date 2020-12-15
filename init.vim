@@ -71,6 +71,8 @@ noremap <leader>hl :nohl<CR>
 nmap j gj
 nmap k gk
 
+tnoremap <Esc> <C-\><C-n>
+
 " Set C++ editing options
 autocmd FileType cpp setlocal shiftwidth=0 tabstop=2 expandtab
 
