@@ -10,6 +10,9 @@ ln -sf $(pwd)/vimrc $HOME/.vimrc
 ln -sf $(pwd)/vimrc.plugins $HOME/.vimrc.plugins
 ln -sf $(pwd)/coc-settings.json $HOME/.vim/coc-settings.json
 
+mkdir -p $(HOME)/.config/nvim
+ln -sf $(pwd)/init.vim $HOME/.config/nvim/init.vim
+
 # tmux
 ln -sf $(pwd)/tmux.conf $HOME/.tmux.conf
 
