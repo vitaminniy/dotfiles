@@ -4,3 +4,5 @@
 	exclude = "!f() { vim .git/info/exclude; }; f"
 [rerere]
 	enabled = false
+[init]
+	defaultBranch = master
