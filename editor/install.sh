@@ -7,8 +7,8 @@ main() {
         mkdir -p $NVIM_CONFIG_DIR
     fi
 
-    ln -sf $(PWD)/init.vim $NVIM_CONFIG_DIR/init.vim
-    ln -sf $(PWD)/coc-settings.json $NVIM_CONFIG_DIR/coc-settings.json
+    ln -sf $(pwd)/init.vim $NVIM_CONFIG_DIR/init.vim
+    ln -sf $(pwd)/coc-settings.json $NVIM_CONFIG_DIR/coc-settings.json
 
     # install plug
     sh -c 'curl -fLo $HOME/.config/nvim/autoload/plug.vim --create-dirs \
