@@ -85,7 +85,7 @@ if [ -f $YQL_SHELL_COMPLETION ]; then source $YQL_SHELL_COMPLETION; fi
 
 # Export rust sources directory
 # If not exists than call `rustup add component rust-src`
-if rustc_loc='$(type -p rustc)' || [[ -z $rustc_loc ]]; then
+if type "$rustc" > /dev/null; then
     RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
     if [[ -d $RUST_SRC_PATH ]]; then
         export RUST_SRC_PATH=$RUST_SRC_PATH
