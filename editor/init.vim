@@ -4,10 +4,6 @@ call plug#begin(stdpath('data').'/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'wakatime/vim-wakatime'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-    "" fzf
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let mapleader=","
@@ -141,20 +137,3 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-""""""""""""""""""""""""""""""""""""" fzf """"""""""""""""""""""""""""""""""""""
-let g:fzf_layout = {'down': '~20%'}
-
-let $FZF_DEFAULT_OPTS = '--info=inline'
-let $FZF_DEFAULT_COMMAND="rg --files --hidden"
-
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
-
-let g:fzf_tags_command = 'ctags -R'
-
-nmap <leader>fs :Files<CR>
