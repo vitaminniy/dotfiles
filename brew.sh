@@ -1,20 +1,21 @@
 #!/bin/sh
 
 brew	install			\
-		htop			\
-		tmux			\
-		jq				\
-		fzf				\
-		ncdu			\
+		ccache			\
 		cmake			\
-		llvm			\
-		node			\
-		yarn			\
 		conan			\
 		coreutils		\
+		fzf				\
 		grpc			\
+		htop			\
+		jq				\
+		llvm			\
+		ncdu			\
+		node			\
+		pinentry-mac	\
 		protobuf		\
 		pyenv			\
-		pinentry-mac	\
-		ccache
+		stow			\
+		tmux			\
+		yarn
 
