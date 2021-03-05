@@ -12,6 +12,7 @@ install_nvim() {
 main() {
     stow -v -t $HOME \
         alacritty \
+        emacs \
         git \
         nvim \
         tmux \
