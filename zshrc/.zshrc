@@ -59,11 +59,9 @@ if [ -f $HOME/yandex-cloud/path.bash.inc ]; then source $HOME/yandex-cloud/path.
 # The next line enables shell command completion for yc.
 if [ -f $HOME/yandex-cloud/completion.zsh.inc ]; then source $HOME/yandex-cloud/completion.zsh.inc; fi
 
-export CC='clang'
-export CXX=$CC++
-
+DISABLE_DARWIN_LLVM=0
 # Enable mainline llvm on darwin if installed
-if [ -d /usr/local/opt/llvm ]; then
+if [ -d /usr/local/opt/llvm && DISABLE_DARWIN_LLVM ]; then
     path=(
         $path
         /usr/local/opt/llvm/bin
