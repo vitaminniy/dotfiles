@@ -4,6 +4,7 @@ call plug#begin(stdpath('data').'/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'wakatime/vim-wakatime'
     Plug 'neovim/nvim-lspconfig'
+    Plug 'rust-lang/rust.vim'
 call plug#end()
 
 let mapleader=","
@@ -169,7 +170,7 @@ end
 
 -- Use a loop to conveniently both setup defined servers 
 -- and map buffer local keybindings when the language server attaches
-local servers = { "pyright", "clangd", "gopls" }
+local servers = { "pyright", "clangd", "gopls", "rls" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
