@@ -59,27 +59,8 @@ if [ -f $HOME/yandex-cloud/path.bash.inc ]; then source $HOME/yandex-cloud/path.
 # The next line enables shell command completion for yc.
 if [ -f $HOME/yandex-cloud/completion.zsh.inc ]; then source $HOME/yandex-cloud/completion.zsh.inc; fi
 
-export DISABLE_DARWIN_LLVM=0
-# Enable mainline llvm on darwin if installed
-if [[ -d /usr/local/opt/llvm && $DISABLE_DARWIN_LLVM == 1 ]]; then
-    path=(
-        $path
-        /usr/local/opt/llvm/bin
-    )
-
-    export CC='/usr/local/opt/llvm/bin/clang'
-    export CXX=$CC++
-
-    LDFLAGS+='-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib'
-    export LDFLAGS=$LDFLAGS
-
-    CPPFLAGS+='-I/usr/local/opt/llvm/include -I/usr/local/opt/llvm/include/c++/v1/'
-    export CPPFLAGS=$CPPFLAGS
-fi
-
-# Enabled YQL shell completions
-YQL_SHELL_COMPLETION=$HOME/.yql/shell_completion
-if [ -f $YQL_SHELL_COMPLETION ]; then source $YQL_SHELL_COMPLETION; fi
+# The next line enabled shell completion for yql.
+if [ -f $HOME/.yql/shell_completion ]; then source $HOME/.yql/shell_completion; fi
 
 # Export rust sources directory
 # If not exists than call `rustup add component rust-src`
