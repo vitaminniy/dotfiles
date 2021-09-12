@@ -12,6 +12,7 @@ main() {
 
     # add components
     rustup component add rust-src
+    rustup component add rls
 
     # install tools
     cargo install rusty-tags # ctags generation
