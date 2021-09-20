@@ -15,5 +15,6 @@ brew    install         \
         pyenv           \
         stow            \
         tmux            \
-        yarn
+        yarn            \
+        automake
 
