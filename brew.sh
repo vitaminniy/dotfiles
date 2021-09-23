@@ -16,5 +16,6 @@ brew    install         \
         stow            \
         tmux            \
         yarn            \
-        automake
+        automake        \
+        autoconf
 
