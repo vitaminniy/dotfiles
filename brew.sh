@@ -1,11 +1,14 @@
 #!/bin/sh
 
 brew    install         \
+        autoconf        \
+        automake        \
         ccache          \
         cmake           \
         conan           \
         coreutils       \
         fzf             \
+        gnupg           \
         htop            \
         jq              \
         llvm            \
@@ -15,7 +18,5 @@ brew    install         \
         pyenv           \
         stow            \
         tmux            \
-        yarn            \
-        automake        \
-        autoconf
+        yarn
 
