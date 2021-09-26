@@ -15,16 +15,30 @@ install_nvim() {
     fi
 }
 
-main() {
-    stow -v -t $HOME \
-        alacritty \
-        emacs \
-        git \
-        nvim \
-        tmux \
-        zshrc
+install_brew() {
+    if [[ "$OSTYPE" != "darwin"* ]]; then
+        return 0
+    fi
 
+    if hash brew 2> /dev/null; then
+        return 0;
+    fi
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+main() {
+    install_brew
     install_nvim
+
+    stow -v -t $HOME    \
+        gnupg           \
+        alacritty       \
+        emacs           \
+        git             \
+        nvim            \
+        tmux            \
+        zshrc
 }
 
 main || exit 1
