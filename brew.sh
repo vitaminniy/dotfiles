@@ -15,6 +15,7 @@ brew    install         \
         ncdu            \
         node            \
         pinentry-mac    \
+        postgres        \
         pyenv           \
         stow            \
         tmux            \
