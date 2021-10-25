@@ -174,4 +174,11 @@ local servers = { "pyright", "clangd", "gopls", "rls" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
+
+-- cmake-language-server
+nvim_lsp.cmake.setup {
+    on_attach = on_attach,
+    cmd = { "cmake-language-server" },
+}
+
 EOF
