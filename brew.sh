@@ -16,6 +16,7 @@ brew    install         \
         node            \
         pinentry-mac    \
         postgres        \
+        prototool       \
         pyenv           \
         stow            \
         tmux            \
