@@ -170,10 +170,16 @@ end
 
 -- Use a loop to conveniently both setup defined servers 
 -- and map buffer local keybindings when the language server attaches
-local servers = { "pyright", "clangd", "gopls", "rls" }
+local servers = { "pyright", "gopls", "rls" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
+
+-- clang setup
+nvim_lsp.clangd.setup {
+    cmd = { "clangd", "--background-index", "--clang-tidy", "-j=4" },
+    on_attach = on_attach,
+}
 
 -- cmake-language-server
 nvim_lsp.cmake.setup {
