@@ -76,6 +76,16 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
 
+# Enable ccahe
+# /usr/local/opt/ccache/libexec
+CCACHE_LIBEXEC=/usr/local/opt/ccache/libexec
+if [ -d $CCACHE_LIBEXEC ]; then
+  path=(
+    $CCACHE_LIBEXEC
+    $path
+  )
+fi
+
 # bindings
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
