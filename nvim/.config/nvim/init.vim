@@ -79,7 +79,7 @@ autocmd FileType cpp setlocal shiftwidth=0 tabstop=2 expandtab
 
 "" fugitive
 nnoremap <leader>gd :Gvdiff<CR>
-nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gw :Gw<CR>
 
 """"""""""""""""""""""""""""""""""" vimwiki """"""""""""""""""""""""""""""""""""
