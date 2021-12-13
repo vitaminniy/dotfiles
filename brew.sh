@@ -4,6 +4,7 @@ brew    install         \
         autoconf        \
         automake        \
         ccache          \
+        cmake-docs      \
         cmake           \
         conan           \
         coreutils       \
