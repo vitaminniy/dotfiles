@@ -76,6 +76,20 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
 
+# Enable mainline llvm support
+if [[ -d /usr/local/opt/llvm ]]; then
+  path=(
+    $path
+    /usr/local/opt/llvm/bin
+  )
+
+  LDFLAGS+='-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib'
+  export LDFLAGS=$LDFLAGS
+
+  CPPFLAGS+='-I/usr/local/opt/llvm/include -I/usr/local/opt/llvm/include/c++/v1/'
+  export CPPFLAGS=$CPPFLAGS
+fi
+
 # Enable ccahe
 # /usr/local/opt/ccache/libexec
 CCACHE_LIBEXEC=/usr/local/opt/ccache/libexec
