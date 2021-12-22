@@ -4,8 +4,8 @@ brew    install         \
         autoconf        \
         automake        \
         ccache          \
-        cmake-docs      \
         cmake           \
+        cmake-docs      \
         conan           \
         coreutils       \
         fzf             \
@@ -21,5 +21,6 @@ brew    install         \
         pyenv           \
         stow            \
         tmux            \
+        wget            \
         yarn
 
