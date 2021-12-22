@@ -32,11 +32,12 @@ main() {
     install_nvim
 
     stow -v -t $HOME    \
-        gnupg           \
         alacritty       \
         emacs           \
         git             \
+        gnupg           \
         nvim            \
+        psql            \
         tmux            \
         zshrc
 }
