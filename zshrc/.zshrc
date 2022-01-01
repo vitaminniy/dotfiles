@@ -82,12 +82,6 @@ if [[ -d /usr/local/opt/llvm ]]; then
     $path
     /usr/local/opt/llvm/bin
   )
-
-  LDFLAGS+='-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib'
-  export LDFLAGS=$LDFLAGS
-
-  CPPFLAGS+='-I/usr/local/opt/llvm/include -I/usr/local/opt/llvm/include/c++/v1/'
-  export CPPFLAGS=$CPPFLAGS
 fi
 
 # Enable ccahe
