@@ -5,7 +5,8 @@ call plug#begin(stdpath('data').'/plugged')
     Plug 'wakatime/vim-wakatime'
     Plug 'neovim/nvim-lspconfig'
     Plug 'rust-lang/rust.vim'
-    Plug 'huyvohcmc/atlas.vim'
+    Plug 'vitaminniy/atlas.vim'
+    Plug 'mhinz/vim-rfc'
 call plug#end()
 
 colorscheme atlas
