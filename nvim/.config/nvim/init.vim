@@ -5,7 +5,10 @@ call plug#begin(stdpath('data').'/plugged')
     Plug 'wakatime/vim-wakatime'
     Plug 'neovim/nvim-lspconfig'
     Plug 'rust-lang/rust.vim'
+    Plug 'huyvohcmc/atlas.vim'
 call plug#end()
+
+colorscheme atlas
 
 let mapleader=","
 set nocompatible
