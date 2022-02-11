@@ -181,7 +181,7 @@ end
 
 -- clang setup
 nvim_lsp.clangd.setup {
-    cmd = { "clangd", "--background-index", "--clang-tidy", "-j=4" },
+    cmd = { "clangd", "--background-index", "--clang-tidy", "-j=8" },
     on_attach = on_attach,
 }
 
