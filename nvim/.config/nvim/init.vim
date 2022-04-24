@@ -7,12 +7,15 @@ call plug#begin(stdpath('data').'/plugged')
     Plug 'rust-lang/rust.vim'
     Plug 'vitaminniy/atlas.vim'
     Plug 'mhinz/vim-rfc'
+    Plug 'preservim/tagbar'
 call plug#end()
 
 colorscheme atlas
 
 let mapleader=","
 set nocompatible
+
+set tags=tags,./tags
 
 filetype plugin indent on   " autodetect file type
 syntax on                   " syntax highlighting
