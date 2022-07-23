@@ -177,26 +177,53 @@ end
 
 -- Use a loop to conveniently both setup defined servers 
 -- and map buffer local keybindings when the language server attaches
-local servers = { "pyright", "gopls", "rls" }
+local servers = { "pyright", "rls" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
 
--- clang setup
-nvim_lsp.clangd.setup {
-    cmd = { "clangd", 
-        "--background-index", 
-        "--clang-tidy",
-        "-j=8",
-        "--header-insertion=iwyu"
-    },
-    on_attach = on_attach,
-}
+local setup_clangd = function(lsp)
+    lsp.clangd.setup {
+        cmd = { "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "-j=8", 
+            "--header-insertion=iwyu"
+        },
+        on_attach = on_attach,
+    }
+end
 
--- cmake-language-server
-nvim_lsp.cmake.setup {
-    on_attach = on_attach,
-    cmd = { "cmake-language-server" },
-}
+local setup_cmake_language_server = function(lsp)
+    lsp.cmake.setup {
+        on_attach = on_attach,
+        cmd = { "cmake-language-server" },
+    }
+end
+
+local setup_gopls = function(lsp)
+    lsp.gopls.setup {
+        on_attach = on_attach,
+        settings = {
+            gopls = {
+                analyses = {
+                    unusedparams = true,
+                    unusedvariable = true,
+                    fieldalignment = true,
+                    nilness = true,
+                    shadow = true,
+                },
+                staticcheck = true,
+                codelenses = {
+                  gc_details = true
+                },
+           },
+        },
+    }
+end
+
+setup_clangd(nvim_lsp)
+setup_cmake_language_server(nvim_lsp)
+setup_gopls(nvim_lsp)
 
 EOF
