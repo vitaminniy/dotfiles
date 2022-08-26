@@ -94,11 +94,15 @@ nnoremap <leader>gw :Gw<CR>
 let g:vimwiki_list = [
 \ {
 \	'path': '$HOME/Yandex.Disk.localized/vimwiki',
-\	'path_html': '$HOME/Yandex.Disk.localized/vimwiki/wiki_html',
+\	'ext': '.md',
+\	'syntax': 'markdown',
+\ },
+\ {
+\	'path': '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/max',
+\	'ext': '.md',
+\	'syntax': 'markdown',
 \ }
 \ ]
-let g:vimwiki_ext = '.md'
-let g:vimwiki_syntax = 'markdown'
 let g:vimwiki_global_ext = 0
 
 
