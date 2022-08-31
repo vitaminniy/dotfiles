@@ -16,7 +16,6 @@ brew    install         \
         ncdu            \
         node            \
         pinentry-mac    \
-        postgres        \
         prototool       \
         pyenv           \
         stow            \
