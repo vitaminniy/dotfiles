@@ -41,6 +41,8 @@ install_node() {
 }
 
 main() {
+    mkdir -p $HOME/.ssh
+
     install_brew
     install_node
     install_nvim
@@ -52,6 +54,7 @@ main() {
         gnupg           \
         nvim            \
         psql            \
+        ssh             \
         tmux            \
         zshrc
 }
