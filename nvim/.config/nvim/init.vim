@@ -104,6 +104,7 @@ let g:vimwiki_list = [
 \ }
 \ ]
 let g:vimwiki_global_ext = 0
+let g:vimwiki_auto_diary_index = 1
 
 
 """"""""""""""""""""""""""""""""""" vim-go """""""""""""""""""""""""""""""""""""
