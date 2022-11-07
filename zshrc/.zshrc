@@ -47,11 +47,7 @@ echo "\\e[1mOS: \\e[0;32m\"$(uname -rs)\"\\e[0m"
 echo "$(uptime | sed 's/^ //' | sed 's/^up //' | awk '{print "\\e[1mUptime: \\e[0;32m"$0"\\e[0m"}')"
 echo "\\e[1mHostname: \\e[0;32m$(uname -n)\\e[0m"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then . $HOME/google-cloud-sdk/path.zsh.inc; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then . $HOME/google-cloud-sdk/completion.zsh.inc; fi
+# COMPLETIONS
 
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f $HOME/yandex-cloud/path.bash.inc ]; then source $HOME/yandex-cloud/path.bash.inc; fi
@@ -61,6 +57,13 @@ if [ -f $HOME/yandex-cloud/completion.zsh.inc ]; then source $HOME/yandex-cloud/
 
 # The next line enabled shell completion for yql.
 if [ -f $HOME/.yql/shell_completion ]; then source $HOME/.yql/shell_completion; fi
+
+if [ -f $HOME/.zshrc_completions/kubectl/completion.zsh.inc ]; then source $HOME/.zshrc_completions/kubectl/completion.zsh.inc; fi
+
+# COMPLETIONS END
+
+
+
 
 # Export rust sources directory
 # If not exists than call `rustup add component rust-src`
