@@ -18,6 +18,7 @@ brew    install         \
         pinentry-mac    \
         prototool       \
         pyenv           \
+        ruby            \
         stow            \
         tmux            \
         wget            \

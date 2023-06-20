@@ -227,8 +227,16 @@ local setup_gopls = function(lsp)
     }
 end
 
+local setup_rubylsp = function(lsp)
+    lsp.ruby_ls.setup {
+        on_attach = on_attach,
+        cmd       = {"ruby-lsp"},
+    }
+end
+
 setup_clangd(nvim_lsp)
 setup_cmake_language_server(nvim_lsp)
 setup_gopls(nvim_lsp)
+setup_rubylsp(nvim_lsp)
 
 EOF
