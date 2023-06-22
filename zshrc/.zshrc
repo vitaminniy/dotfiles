@@ -84,6 +84,11 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
 
+# Enable rbenv
+if command -v rbenv 1>/dev/null 2>&1; then
+    eval "$(rbenv init - zsh)"
+fi
+
 # Enable mainline llvm support
 if [[ -d /usr/local/opt/llvm ]]; then
   path=(
