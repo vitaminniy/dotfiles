@@ -21,14 +21,6 @@ path=(
     $PYENV_ROOT/bin
 )
 
-if [ -d /opt/homebrew/opt/ruby/bin ]
-then
-    path=(
-        /opt/homebrew/opt/ruby/bin
-        $path
-    )
-fi
-
 plugins=(
     colorize
     docker
