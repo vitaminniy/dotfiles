@@ -23,8 +23,6 @@ path=(
 
 plugins=(
     colorize
-    docker
-    docker-compose
     git
     tmux
     rust
