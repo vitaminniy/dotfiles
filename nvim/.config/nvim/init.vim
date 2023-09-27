@@ -126,6 +126,9 @@ let g:go_def_mapping_enabled = 1
 let g:go_term_enabled = 1
 let g:go_term_close_on_exit = 0
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 "" lsp
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 set completeopt=menuone,noinsert,noselect
@@ -135,8 +138,6 @@ local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
   local opts = { noremap=true, silent=true }
