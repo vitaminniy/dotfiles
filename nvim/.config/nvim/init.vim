@@ -4,10 +4,8 @@ call plug#begin(stdpath('data').'/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'wakatime/vim-wakatime'
     Plug 'neovim/nvim-lspconfig'
-    Plug 'rust-lang/rust.vim'
     Plug 'vitaminniy/atlas.vim'
     Plug 'mhinz/vim-rfc'
-    Plug 'preservim/tagbar'
 call plug#end()
 
 colorscheme atlas
@@ -227,16 +225,8 @@ local setup_gopls = function(lsp)
     }
 end
 
-local setup_rubylsp = function(lsp)
-    lsp.ruby_ls.setup {
-        on_attach = on_attach,
-        cmd       = {"ruby-lsp"},
-    }
-end
-
 setup_clangd(nvim_lsp)
 setup_cmake_language_server(nvim_lsp)
 setup_gopls(nvim_lsp)
-setup_rubylsp(nvim_lsp)
 
 EOF
