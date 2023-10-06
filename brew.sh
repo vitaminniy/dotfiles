@@ -16,7 +16,6 @@ brew    install          \
         ncdu             \
         node             \
         pinentry-mac     \
-        prototool        \
         pyenv            \
         rbenv ruby-build \
         ripgrep          \
