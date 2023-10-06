@@ -19,6 +19,7 @@ brew    install          \
         prototool        \
         pyenv            \
         rbenv ruby-build \
+        ripgrep          \
         stow             \
         tmux             \
         wget             \
