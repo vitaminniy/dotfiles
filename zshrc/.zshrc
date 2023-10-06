@@ -57,14 +57,20 @@ if [ -f $HOME/yandex-cloud/completion.zsh.inc ]; then source $HOME/yandex-cloud/
 if [ -f $HOME/.yql/shell_completion ]; then source $HOME/.yql/shell_completion; fi
 
 # kubectl
-if [ -f $HOME/.zshrc_completions/kubectl/completion.zsh.inc ]; then source $HOME/.zshrc_completions/kubectl/completion.zsh.inc; fi
+if [ -f $HOME/.zshrc_completions/kubectl/completion.zsh.inc ]; then
+	source $HOME/.zshrc_completions/kubectl/completion.zsh.inc;
+fi
 
 # gcloud
 if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then source $HOME/google-cloud-sdk/completion.zsh.inc; fi
 if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then source $HOME/google-cloud-sdk/path.zsh.inc; fi
 
-# COMPLETIONS END
+# colima
+if [ -f $HOME/.zshrc_completions/colima/completion.zsh.inc ]; then
+	source $HOME/.zshrc_completions/colima/completion.zsh.inc;
+fi
 
+# COMPLETIONS END
 
 
 
