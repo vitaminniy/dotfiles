@@ -70,6 +70,11 @@ if [ -f $HOME/.zshrc_completions/colima/completion.zsh.inc ]; then
 	source $HOME/.zshrc_completions/colima/completion.zsh.inc;
 fi
 
+# litmus
+if [ -f $HOME/.zshrc_completions/litmusctl/completion.zsh.inc ]; then
+	source $HOME/.zshrc_completions/litmusctl/completion.zsh.inc;
+fi
+
 # COMPLETIONS END
 
 
