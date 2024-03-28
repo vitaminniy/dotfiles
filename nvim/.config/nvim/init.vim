@@ -6,6 +6,7 @@ call plug#begin(stdpath('data').'/plugged')
     Plug 'neovim/nvim-lspconfig'
     Plug 'vitaminniy/atlas.vim'
     Plug 'mhinz/vim-rfc'
+    Plug 'github/copilot.vim'
 call plug#end()
 
 colorscheme atlas
