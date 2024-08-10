@@ -75,6 +75,11 @@ if [ -f $HOME/.zshrc_completions/litmusctl/completion.zsh.inc ]; then
 	source $HOME/.zshrc_completions/litmusctl/completion.zsh.inc;
 fi
 
+# fzf
+if [ -f $HOME/.zshrc_completions/fzf/completion.zsh.inc ]; then
+	source $HOME/.zshrc_completions/fzf/completion.zsh.inc;
+fi
+
 # COMPLETIONS END
 
 
