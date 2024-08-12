@@ -196,6 +196,8 @@ local setup_clangd = function(lsp)
             "--header-insertion=iwyu"
         },
         on_attach = on_attach,
+        filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "arduino" },
+        autostart = true,
     }
 end
 
@@ -219,6 +221,7 @@ local setup_gopls = function(lsp)
                     shadow = true,
                 },
                 staticcheck = true,
+                gofumpt = true,
                 codelenses = {
                   gc_details = true
                 },
