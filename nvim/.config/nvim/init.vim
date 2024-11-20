@@ -20,7 +20,6 @@ filetype plugin indent on   " autodetect file type
 syntax on                   " syntax highlighting
 scriptencoding utf-8
 set encoding=utf-8
-set termencoding=utf-8
 set noswapfile                  " disable swap files
 set autochdir                   " auto change current directory to file directory
 set hidden                      " Allow buffer switching without saving
