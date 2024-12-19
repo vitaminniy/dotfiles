@@ -12,11 +12,12 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export PYENV_ROOT=$HOME/.pyenv
 
 path=(
+    $HOME/bin
+    $HOME/sbin
     $path
     /usr/local/bin
     $GOPATH/bin
     $GOROOT/bin
-    $HOME/bin
     $HOME/.cargo/bin
     $PYENV_ROOT/bin
 )
