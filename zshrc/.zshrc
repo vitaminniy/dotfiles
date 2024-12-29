@@ -9,17 +9,15 @@ export GOROOT=/usr/local/go
 # disable Micorsoft telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-export PYENV_ROOT=$HOME/.pyenv
-
 path=(
     $HOME/bin
     $HOME/sbin
+    $HOME/.cargo/bin
+    $HOME/.pyenv/bin
+    $GOPATH/bin
     $path
     /usr/local/bin
-    $GOPATH/bin
     $GOROOT/bin
-    $HOME/.cargo/bin
-    $PYENV_ROOT/bin
 )
 
 plugins=(
