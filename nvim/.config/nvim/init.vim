@@ -1,13 +1,14 @@
-call plug#begin(stdpath('data').'/plugged')
-    Plug 'fatih/vim-go'
-    Plug 'tpope/vim-fugitive'
-    Plug 'vimwiki/vimwiki'
-    Plug 'wakatime/vim-wakatime'
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'vitaminniy/atlas.vim'
-    Plug 'mhinz/vim-rfc'
-    Plug 'github/copilot.vim'
-call plug#end()
+" set shell=/usr/bin/env zsh
+
+" Copypasted from github.com/nk2ge5k/dotfiles20.0/vim/vimrc
+let s:vim_dir = expand('<sfile>:h')
+function! s:LocalSource(filename) abort
+    exec 'source ' . s:vim_dir . '/' . a:filename
+endfunction
+
+call s:LocalSource('vimrc.plugins')
+
+" General
 
 colorscheme atlas
 
@@ -232,5 +233,6 @@ end
 setup_clangd(nvim_lsp)
 setup_cmake_language_server(nvim_lsp)
 setup_gopls(nvim_lsp)
+
 
 EOF
