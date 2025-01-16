@@ -50,6 +50,7 @@ main() {
     stow -v -t $HOME    \
         alacritty       \
         emacs           \
+        ghostty         \
         git             \
         gnupg           \
         nvim            \
