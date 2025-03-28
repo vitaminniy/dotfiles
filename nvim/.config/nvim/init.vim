@@ -216,7 +216,6 @@ local setup_gopls = function(lsp)
                 analyses = {
                     unusedparams = true,
                     unusedvariable = true,
-                    fieldalignment = true,
                     nilness = true,
                     shadow = true,
                 },
