@@ -120,6 +120,15 @@ if [ -d $CCACHE_LIBEXEC ]; then
   )
 fi
 
+# Enable opencode: https://github.com/opencode-ai/opencode
+# $HOME/.opencode/bin
+if [[ -d $HOME/.opencode/bin ]]; then
+  path=(
+    $path
+    $HOME/.opencode/bin
+  )
+fi
+
 # bindings
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
