@@ -11,6 +11,7 @@ brew    install             \
         gnupg               \
         htop                \
         jq                  \
+        lua-language-server \
         perl                \
         pinentry-mac        \
         pyenv               \
