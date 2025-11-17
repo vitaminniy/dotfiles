@@ -3,10 +3,6 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
 
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
-  end
-
   local opts = {noremap = true, silent = true}
 
   buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
@@ -60,11 +56,13 @@ vim.lsp.config('clangd', {
   },
   autostart = true,
 })
+vim.lsp.enable('clangd')
 
 vim.lsp.config('cmake', {
   cmd = { "cmake-language-server" },
   on_attach = on_attach,
 })
+vim.lsp.enable('cmake')
 
 vim.lsp.config('gopls', {
   on_attach = on_attach,
@@ -84,3 +82,25 @@ vim.lsp.config('gopls', {
     },
   },
 })
+vim.lsp.enable('gopls')
+
+vim.lsp.config('lua_ls', {
+  cmd = { "lua-language-server" },
+  on_attach = on_attach,
+  filetypes = { "lua" },
+  root_markers = {
+    {
+      '.luarc.json',
+      '.luarc.jsonc',
+    },
+    '.git',
+  },
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+      }
+    },
+  },
+})
+vim.lsp.enable('lua_ls')
