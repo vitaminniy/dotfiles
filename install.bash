@@ -54,6 +54,7 @@ main() {
         git             \
         gnupg           \
         nvim            \
+        opencode        \
         psql            \
         ssh             \
         tmux            \
