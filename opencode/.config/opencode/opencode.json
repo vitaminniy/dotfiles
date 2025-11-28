@@ -9,6 +9,7 @@
 
         "bash": "ask",
         "find": "allow",
+        "grep": "allow",
         "ls": "allow",
         "tree": "allow",
 
