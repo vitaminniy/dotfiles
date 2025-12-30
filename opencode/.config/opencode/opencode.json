@@ -7,12 +7,15 @@
     "permission": {
         "external_directory": "ask",
 
+        "head": "allow",
+        "rg": "allow",
         "bash": "ask",
         "find": "allow",
         "grep": "allow",
         "ls": "allow",
         "tree": "allow",
 
+        "git log": "allow",
         "git push": "ask"
   }
 }
