@@ -27,29 +27,13 @@ install_brew() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
-install_node() {
-    if hash node 2> /dev/null; then
-        return 0
-    fi
-
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        brew install node
-    elif [[ "$OSTYPE" == "linux"* ]]; then
-        curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-        sudo apt-get install -y nodejs
-    fi
-}
-
 main() {
     mkdir -p $HOME/.ssh
 
     install_brew
-    install_node
     install_nvim
 
     stow -v -t $HOME    \
-        alacritty       \
-        emacs           \
         ghostty         \
         git             \
         gnupg           \
