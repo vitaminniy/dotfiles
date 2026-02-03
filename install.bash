@@ -27,11 +27,23 @@ install_brew() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
+stow_linux() {
+    if [[ "$OSTYPE" != "linux"* ]]; then
+        return 0;
+    fi
+
+    echo "Stowing linux";
+
+    stow -v -t $HOME    \
+        i3status
+}
+
 main() {
     mkdir -p $HOME/.ssh
 
     install_brew
     install_nvim
+    stow_linux
 
     stow -v -t $HOME    \
         ghostty         \
