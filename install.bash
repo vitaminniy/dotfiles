@@ -33,9 +33,6 @@ stow_linux() {
     fi
 
     echo "Stowing linux";
-
-    stow -v -t $HOME    \
-        i3status
 }
 
 main() {
