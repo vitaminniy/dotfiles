@@ -92,7 +92,7 @@ nnoremap <leader>gw :Gw<CR>
 
 let g:vimwiki_list = [
 \ {
-\	'path': '$HOME/vimwiki',
+\	'path': '$HOME/Dev/github.com/vitaminniy/vimwiki',
 \	'ext': '.md',
 \	'syntax': 'markdown',
 \ }
