@@ -6,14 +6,10 @@ export PAGER=less
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 
-# disable Micorsoft telemetry
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
-
 path=(
     $HOME/bin
     $HOME/sbin
     $HOME/.cargo/bin
-    $HOME/.pyenv/bin
     $GOPATH/bin
     $path
     /usr/local/bin
@@ -92,11 +88,6 @@ if type "$rustc" > /dev/null; then
     fi
 fi
 
-# Enable pyenv shims and autocompletion
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
-fi
-
 # Enable rbenv
 if command -v rbenv 1>/dev/null 2>&1; then
     eval "$(rbenv init - zsh)"
@@ -107,16 +98,6 @@ if [[ -d /usr/local/opt/llvm ]]; then
   path=(
     $path
     /usr/local/opt/llvm/bin
-  )
-fi
-
-# Enable ccahe
-# /usr/local/opt/ccache/libexec
-CCACHE_LIBEXEC=/usr/local/opt/ccache/libexec
-if [ -d $CCACHE_LIBEXEC ]; then
-  path=(
-    $CCACHE_LIBEXEC
-    $path
   )
 fi
 
