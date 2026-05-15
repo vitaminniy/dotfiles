@@ -33,14 +33,17 @@ stow_linux() {
     fi
 
     echo "Stowing linux";
+    stow -v -t $HOME \
+	    git      \
+	    nvim     \
+	    psql     \
+	    tmux
 }
 
-main() {
-    mkdir -p $HOME/.ssh
-
-    install_brew
-    install_nvim
-    stow_linux
+stow_osx() {
+    if [[ "$OSTYPE" != "darwin"* ]]; then
+        return 0
+    fi
 
     stow -v -t $HOME    \
         ghostty         \
@@ -52,6 +55,15 @@ main() {
         ssh             \
         tmux            \
         zshrc
+}
+
+main() {
+    mkdir -p $HOME/.ssh
+
+    install_brew
+    install_nvim
+    stow_linux
+    stow_osx
 }
 
 main || exit 1
